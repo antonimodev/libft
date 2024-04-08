@@ -10,10 +10,21 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
+
 int	ft_isalpha(int c)
 {
-	if ((c <= "Z" && c >= "A") || (c <= "z" && c >= "a"))
+	if ((c <= 'Z' && c >= 'A') || (c <= 'z' && c >= 'a'))
 		return (1);
 	else
 		return (0);
+}
+
+int	main()
+{
+	int a;
+
+	a = 'k';
+	printf("Este es el resultado: %d.\n", ft_isalpha(a));
+	return 0;
 }
