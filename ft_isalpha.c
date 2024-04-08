@@ -6,13 +6,13 @@
 /*   By: antonimo <antonimo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 15:24:39 by antonimo          #+#    #+#             */
-/*   Updated: 2024/04/08 15:25:18 by antonimo         ###   ########.fr       */
+/*   Updated: 2024/04/08 15:56:25 by antonimo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isalpha(int c)
 {
-	if (c <= "Z" && c >= "A" && c <= "z" && c >= "a")
+	if ((c <= "Z" && c >= "A") || (c <= "z" && c >= "a"))
 		return (1);
 	else
 		return (0);
