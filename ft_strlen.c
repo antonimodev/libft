@@ -1,21 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: antonimo <antonimo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/08 15:27:24 by antonimo          #+#    #+#             */
-/*   Updated: 2024/04/09 15:49:09 by antonimo         ###   ########.fr       */
+/*   Created: 2024/04/09 12:55:08 by antonimo          #+#    #+#             */
+/*   Updated: 2024/04/09 16:57:39 by antonimo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(int c)
+#include <string.h>
+
+size_t	ft_strlen(const char *s)
 {
-	if (c <= '9' && c >= '0')
-		return (1);
-	else
-		return (0);
+	size_t	i;
+
+	i = 0;
+	while (s[i] != '\0')
+		i++;
+	return (i);
 }
-/*La funcion pide que le pases un valor ASCII
- del 48 al 57 que son los equivalentes al 0-9*/

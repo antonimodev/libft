@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: antonimo <antonimo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/08 15:27:24 by antonimo          #+#    #+#             */
-/*   Updated: 2024/04/09 15:49:09 by antonimo         ###   ########.fr       */
+/*   Created: 2024/04/09 13:00:33 by antonimo          #+#    #+#             */
+/*   Updated: 2024/04/09 16:43:13 by antonimo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(int c)
+#include "libft.h"
+
+int	ft_isalnum(int c)
 {
-	if (c <= '9' && c >= '0')
+	if (ft_isdigit(c) == 1 || ft_isalpha(c) == 1)
 		return (1);
 	else
 		return (0);
 }
-/*La funcion pide que le pases un valor ASCII
- del 48 al 57 que son los equivalentes al 0-9*/

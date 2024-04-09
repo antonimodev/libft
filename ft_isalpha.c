@@ -6,11 +6,11 @@
 /*   By: antonimo <antonimo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 15:24:39 by antonimo          #+#    #+#             */
-/*   Updated: 2024/04/09 10:01:14 by antonimo         ###   ########.fr       */
+/*   Updated: 2024/04/09 15:50:29 by antonimo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <stdio.h> /*Acordarse de quitarlo junto con el main*/
 
 int	ft_isalpha(int c)
 {
