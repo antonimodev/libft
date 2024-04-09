@@ -6,7 +6,7 @@
 /*   By: antonimo <antonimo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 15:24:39 by antonimo          #+#    #+#             */
-/*   Updated: 2024/04/08 15:56:25 by antonimo         ###   ########.fr       */
+/*   Updated: 2024/04/09 10:01:14 by antonimo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,11 @@ int	ft_isalpha(int c)
 		return (0);
 }
 
-int	main()
+int	main(void)
 {
-	int a;
+	int	a;
 
 	a = 'k';
 	printf("Este es el resultado: %d.\n", ft_isalpha(a));
-	return 0;
+	return (0);
 }
