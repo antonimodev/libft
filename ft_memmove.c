@@ -12,50 +12,23 @@
 
 #include "libft.h"
 
-/* void	*ft_memmove(void *dst, const void *src, size_t n)
-{
-	size_t				i;
-	int					j;
-	const unsigned char	*ptr1;
-	unsigned char		*ptr2;
-
-	ptr1 = src;
-	ptr2 = dst;
-	i = 0;
-	if (ptr1 > ptr2)
-	{
-		while (i < n)
-		{
-			ptr2[i] = ptr1[i];
-			i++;
-		}
-	}
-	j = (int)n;
-	while (j >= 0 && ptr1 < ptr2)
-	{
-		ptr2[j] = ptr1[j];
-		j--;
-	}
-	return (dst);
-} */
-
 void	*ft_memmove(void *dst, const void *src, size_t n)
 {
-	size_t				i;
-	const unsigned char	*ptr1;
-	unsigned char		*ptr2;
+	size_t					i;
+	unsigned char 		*ptr2;
+	const unsigned char *ptr1;
 
-	ptr1 = src;
-	ptr2 = dst;
 	i = 0;
-	if (ptr1 < ptr2)
-	{
-		while (n > 0)
+	ptr1 = (const unsigned char *)src;
+	ptr2 = (unsigned char *)dst;
+	if (ptr2 > ptr1)
 		{
-			ptr2[n] = ptr1[n];
-			n--;
+			while (n != 0)
+				{
+					n--;
+					ptr2[n] = ptr1[n];
+				}
 		}
-	}
 	else
 	{
 		while (i < n)
@@ -64,5 +37,5 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 			i++;
 		}
 	}
-	return (dst);
+	return(dst);
 }
