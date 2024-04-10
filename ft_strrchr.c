@@ -1,17 +1,29 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: antonimo <antonimo@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/04/10 10:38:18 by antonimo          #+#    #+#             */
+/*   Updated: 2024/04/10 11:28:04 by antonimo         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-char    *ft_strrchr(const char *str, int chr)
+char	*ft_strrchr(const char *str, int chr)
 {
-    int strlenght;
+	int	strlenght;
 
-    strlenght = ft_strlen(str);
-    while (strlenght >= 0)
-    {
-        if (str[strlenght] == chr)
-            return (char *)(str + strlenght);
-        strlenght --;
-    }
-    return (NULL);
+	strlenght = ft_strlen(str);
+	while (strlenght >= 0)
+	{
+		if (str[strlenght] == chr)
+			return ((char *)(str + strlenght));
+		strlenght --;
+	}
+	return (NULL);
 }
 
 /* 
