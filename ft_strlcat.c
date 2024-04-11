@@ -19,3 +19,12 @@ size_t	ft_strlcat(char *dst, const char *src, size_t n)
 	dst[dstlen + i] = '\0';
 	return (dstlen + srclen);
 }
+
+/* Si n <= dstlen quiere decir que como es menor que el tamaño original de destino,
+retorna n + srclen, porque ese sería el hipotético de sumar dstlen + srclen.
+
+En el segundo bucle, la condicion es i + dstlen porque empezamos a contar la i desde el final de dstlen,
+le decimos que sea < n - 1 porque n al no ser un índice [], no incluye el 0, y luego - 1 porque
+n dice que el ultimo caracter es el caracter nulo para asegurar la funcion. ADEMÁS tenemos en cuenta
+que src llegue a nulo. En el momento que cualquiera de las condiciones se rompa, se coloca nulo y se devuelve
+la suma de ambos de manera hipotetica*/
