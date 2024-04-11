@@ -13,7 +13,8 @@
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <string.h>
+#include <stdio.h>
+#include <string.h>
 /**
  * @brief Identify if the given value is a digit
  * 
