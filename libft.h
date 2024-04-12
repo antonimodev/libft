@@ -6,7 +6,7 @@
 /*   By: antonimo <antonimo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 15:22:19 by antonimo          #+#    #+#             */
-/*   Updated: 2024/04/12 12:16:19 by antonimo         ###   ########.fr       */
+/*   Updated: 2024/04/12 15:08:32 by antonimo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <xlocale.h>
 # include <unistd.h>
 # include <ctype.h>
+# include <stdlib.h>
 /**
  * @brief Identify if the given value is a digit
  * 
