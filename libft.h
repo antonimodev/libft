@@ -6,15 +6,18 @@
 /*   By: antonimo <antonimo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 15:22:19 by antonimo          #+#    #+#             */
-/*   Updated: 2024/04/10 11:29:50 by antonimo         ###   ########.fr       */
+/*   Updated: 2024/04/12 12:16:19 by antonimo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-#include <stdio.h>
-#include <string.h>
+# include <stdio.h>
+# include <string.h>
+# include <xlocale.h>
+# include <unistd.h>
+# include <ctype.h>
 /**
  * @brief Identify if the given value is a digit
  * 
