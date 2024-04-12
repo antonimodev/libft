@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy COMPROBAR.c                              :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: antonimo <antonimo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 13:23:24 by antonimo          #+#    #+#             */
-/*   Updated: 2024/04/10 17:26:14 by antonimo         ###   ########.fr       */
+/*   Updated: 2024/04/12 11:48:37 by antonimo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	size_t					i;
+	size_t				i;
 	const unsigned char	*src2;
 
 	src2 = src;
