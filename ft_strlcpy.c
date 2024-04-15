@@ -6,7 +6,7 @@
 /*   By: antonimo <antonimo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 15:48:27 by antonimo          #+#    #+#             */
-/*   Updated: 2024/04/09 17:52:02 by antonimo         ###   ########.fr       */
+/*   Updated: 2024/04/15 14:57:10 by antonimo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t n)
 	return (ft_strlen(src));
 }
 
-/* int	main(void)
+int	main(void)
 {
 	char	str[20];
 	char	str2[20];
@@ -38,4 +38,4 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t n)
 	printf("Resultado de mi funcion; %lu.\n", strlcpy(str2,"hola", 3));
 	printf("Mi función es: %s.\n", str);
 	printf("Mi función es: %s.\n", str2);
-} */
+}
