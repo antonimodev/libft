@@ -20,6 +20,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	start = 0;
 	end = ft_strlen(s1);
+	if (s1 == NULL || set == NULL)
+		return (NULL);
 	while (ft_strchr(set, s1[start]) != NULL)
 	{
 		start++;

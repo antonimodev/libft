@@ -15,7 +15,6 @@
 
 # include <stdio.h>
 # include <string.h>
-# include <xlocale.h>
 # include <unistd.h>
 # include <ctype.h>
 # include <stdlib.h>
