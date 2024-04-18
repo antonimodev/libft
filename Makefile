@@ -20,10 +20,9 @@ $(NAME):$(OBJ)
 	ar rcs $(CFLAGS) $(OBJ)
 
 clean:
-    rm -rf *.o
+	rm -rf *.o
 
-fclean:
-	clean
+fclean: clean
 	rm -rf $(NAME)
 
 re: fclean all
