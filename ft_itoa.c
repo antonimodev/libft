@@ -1,20 +1,32 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: antonimo <antonimo@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/04/18 10:56:44 by antonimo          #+#    #+#             */
+/*   Updated: 2024/04/18 10:57:52 by antonimo         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 static	int	ft_countdigits(int n)
 {
-    int		nlen;
+	int	nlen;
 
-    nlen = 0;
-    if (n == 0)
-        return 1;
-    if (n < 0)
-        n = -n;
-    while (n > 0)
-    {
-        n = n / 10;
-        nlen ++;
-    }
-    return (nlen);
+	nlen = 0;
+	if (n == 0)
+		return (1);
+	if (n < 0)
+		n = -n;
+	while (n > 0)
+	{
+		n = n / 10;
+		nlen ++;
+	}
+	return (nlen);
 }
 
 static	char	*ft_memdigits(int n)
@@ -51,7 +63,7 @@ static	char	*ft_reversestring(char *str)
 	return (rstr);
 }
 
-char *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	int		i;
 	int		digits;

@@ -6,13 +6,13 @@
 /*   By: antonimo <antonimo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 16:09:34 by antonimo          #+#    #+#             */
-/*   Updated: 2024/04/16 19:24:43 by antonimo         ###   ########.fr       */
+/*   Updated: 2024/04/18 10:58:24 by antonimo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int ft_countwords(char *s, int c)
+static int	ft_countwords(char *s, int c)
 {
 	int	i;
 	int	words;
@@ -35,7 +35,7 @@ static int ft_countwords(char *s, int c)
 static char	**ft_memmatrix(char *s, char c)
 {
 	char	**str;
-	
+
 	str = malloc ((ft_countwords(s, c) + 1) * sizeof(char *));
 	if (str == NULL)
 		return (NULL);
@@ -44,10 +44,10 @@ static char	**ft_memmatrix(char *s, char c)
 
 char	**ft_split(char const *s, char c)
 {
-	int	i;
-	int	j;
-	int	start;
-	char **str;
+	int		i;
+	int		j;
+	int		start;
+	char	**str;
 
 	i = 0;
 	j = 0;

@@ -1,33 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: antonimo <antonimo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/12 11:44:09 by antonimo          #+#    #+#             */
-/*   Updated: 2024/04/18 12:13:52 by antonimo         ###   ########.fr       */
+/*   Created: 2024/04/18 11:01:49 by antonimo          #+#    #+#             */
+/*   Updated: 2024/04/18 12:10:58 by antonimo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	size_t			i;
-	unsigned char	*ptr1;
-	unsigned char	*ptr2;
+	unsigned int	i;
+	char			*str;
 
-	ptr1 = (unsigned char *)s1;
-	ptr2 = (unsigned char *)s2;
 	i = 0;
-	while (i < n && ptr1[i] != '\0' && ptr2[i] != '\0')
+	str = malloc((ft_strlen(s) + 1) * sizeof(char));
+	if (str == NULL)
+		return (NULL);
+	while (str[i] != '\0')
 	{
-		if (ptr1[i] != ptr2[i])
-			return ((int)(ptr1[i] - ptr2[i]));
+		str[i] = f(i, str[i]);
 		i++;
 	}
-	if (i < n)
-		return ((int)(ptr1[i] - ptr2[i]));
-	return (0);
+	str[i] = '\0';
+	return (str);
 }
+
+/*Tenemos que utilizar el puntero a la función
+"f" que recibe los parametros unsigned int y char
+para utilizarlos en cada caracter de s.*/

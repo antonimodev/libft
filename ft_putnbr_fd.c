@@ -1,33 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: antonimo <antonimo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/12 11:44:09 by antonimo          #+#    #+#             */
-/*   Updated: 2024/04/18 12:13:52 by antonimo         ###   ########.fr       */
+/*   Created: 2024/04/18 14:14:39 by antonimo          #+#    #+#             */
+/*   Updated: 2024/04/18 15:38:41 by antonimo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+void	ft_putnbr_fd(int n, int fd)
 {
-	size_t			i;
-	unsigned char	*ptr1;
-	unsigned char	*ptr2;
+	int	num;
 
-	ptr1 = (unsigned char *)s1;
-	ptr2 = (unsigned char *)s2;
-	i = 0;
-	while (i < n && ptr1[i] != '\0' && ptr2[i] != '\0')
+	if (n == -2147483648)
+		ft_putstr_fd("-2147483648", fd);
+	else if (n == 0)
+		write(fd, "0", sizeof(char));
+	else if (n > 9)
 	{
-		if (ptr1[i] != ptr2[i])
-			return ((int)(ptr1[i] - ptr2[i]));
-		i++;
+		num = (n % 10) + '0';
+		n = n / 10;
+		ft_putnbr_fd(n, fd);
+		write(fd, &num, sizeof(char));
 	}
-	if (i < n)
-		return ((int)(ptr1[i] - ptr2[i]));
-	return (0);
+	else if (n < 0)
+	{
+		write(fd, "-", sizeof(char));
+		n = -n;
+		ft_putnbr_fd(n, fd);
+	}
+	else
+	{
+		num = n + '0';
+		write(fd, &num, sizeof(char));
+	}
 }
