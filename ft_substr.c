@@ -30,7 +30,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		start++;
 	}
 	ptr[i] = '\0';
-	return (ptr);
+	return ((char *)ptr);
 }
 
 /*Las dos excepciones tienen en cuenta que si la posicion

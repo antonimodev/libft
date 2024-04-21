@@ -17,7 +17,10 @@ OBJ = $(SRC:%.c=%.o)
 all: $(NAME)
 
 $(NAME):$(OBJ)
-	ar rcs $(CFLAGS) $(OBJ)
+	ar rcs $(NAME) $(OBJ)
+
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	rm -rf *.o

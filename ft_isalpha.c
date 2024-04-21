@@ -19,12 +19,3 @@ int	ft_isalpha(int c)
 	else
 		return (0);
 }
-
-int	main(void)
-{
-	int	a;
-
-	a = 'k';
-	printf("Este es el resultado: %d.\n", ft_isalpha(a));
-	return (0);
-}
