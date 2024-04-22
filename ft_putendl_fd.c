@@ -6,9 +6,11 @@
 /*   By: antonimo <antonimo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 12:48:44 by antonimo          #+#    #+#             */
-/*   Updated: 2024/04/18 13:16:52 by antonimo         ###   ########.fr       */
+/*   Updated: 2024/04/22 10:47:12 by antonimo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_putendl_fd(char *s, int fd)
 {
@@ -20,5 +22,5 @@ void	ft_putendl_fd(char *s, int fd)
 		write(fd, &s[i], 1);
 		i++;
 	}
-	write(1, '\n', 1);
+	write(1, "\n", 1);
 }

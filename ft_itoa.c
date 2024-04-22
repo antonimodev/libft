@@ -6,7 +6,7 @@
 /*   By: antonimo <antonimo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 10:56:44 by antonimo          #+#    #+#             */
-/*   Updated: 2024/04/18 10:57:52 by antonimo         ###   ########.fr       */
+/*   Updated: 2024/04/22 10:42:05 by antonimo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ static	char	*ft_memdigits(int n)
 static	char	*ft_reversestring(char *str)
 {
 	char	*rstr;
-	int		i;
+	size_t	i;
 	int		j;
 	int		strlen;
 

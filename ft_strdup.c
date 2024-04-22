@@ -6,7 +6,7 @@
 /*   By: antonimo <antonimo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 12:04:57 by antonimo          #+#    #+#             */
-/*   Updated: 2024/04/15 12:05:23 by antonimo         ###   ########.fr       */
+/*   Updated: 2024/04/22 10:38:22 by antonimo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,5 @@ char	*ft_strdup(const char *s)
 		i++;
 	}
 	ptr[i] = '\0';
-	return (ptr);
+	return ((char *)ptr);
 }

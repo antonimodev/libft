@@ -6,7 +6,7 @@
 /*   By: antonimo <antonimo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 16:09:34 by antonimo          #+#    #+#             */
-/*   Updated: 2024/04/18 10:58:24 by antonimo         ###   ########.fr       */
+/*   Updated: 2024/04/22 10:41:23 by antonimo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ char	**ft_split(char const *s, char c)
 	i = 0;
 	j = 0;
 	start = 0;
-	str = ft_memmatrix(s, c);
+	str = ft_memmatrix((char *)s, c);
 	while (s[i] != '\0')
 	{
 		if (s[i] == c)

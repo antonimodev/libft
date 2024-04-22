@@ -6,7 +6,7 @@
 /*   By: antonimo <antonimo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 13:04:10 by antonimo          #+#    #+#             */
-/*   Updated: 2024/04/16 15:50:58 by antonimo         ###   ########.fr       */
+/*   Updated: 2024/04/22 10:39:10 by antonimo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t			start;
 	size_t			end;
-	unsigned char	*str;
 
 	start = 0;
 	end = ft_strlen(s1);

@@ -6,7 +6,7 @@
 /*   By: antonimo <antonimo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 12:24:01 by antonimo          #+#    #+#             */
-/*   Updated: 2024/04/15 13:03:52 by antonimo         ###   ########.fr       */
+/*   Updated: 2024/04/22 10:38:44 by antonimo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,5 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		j++;
 	}
 	ptr[i + j] = '\0';
-	return (ptr);
+	return ((char *)ptr);
 }

@@ -6,7 +6,7 @@
 /*   By: antonimo <antonimo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 15:22:19 by antonimo          #+#    #+#             */
-/*   Updated: 2024/04/16 15:56:19 by antonimo         ###   ########.fr       */
+/*   Updated: 2024/04/22 11:47:07 by antonimo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,10 @@
  * @brief Verifies if the given value is an alphabetic character.
  * 
  * @param c The character to be checked.
- * @return int Returns non-zero if the character is an alphabetic character, and zero otherwise.
+ * @return int Returns non-zero if the character is an alphabetic character,
+ *  and zero otherwise.
  */
-int	ft_isalpha(int c);
+int		ft_isalpha(int c);
 
 /**
  * @brief Verifies if the given value is a digit.
@@ -33,31 +34,34 @@ int	ft_isalpha(int c);
  * @param c The character to be checked.
  * @return int Returns non-zero if the character is a digit, and zero otherwise.
  */
-int	ft_isdigit(int c);
+int		ft_isdigit(int c);
 
 /**
  * @brief Verifies if the given value is an alphabetic character or a digit.
  * 
  * @param c The character to be checked.
- * @return int Returns non-zero if the character is an alphabetic character or a digit, and zero otherwise.
+ * @return int Returns non-zero if the character is an alphabetic 
+ * character or a digit, and zero otherwise.
  */
-int	ft_isalnum(int c);
+int		ft_isalnum(int c);
 
 /**
  * @brief Verifies if the given value is a valid ASCII character.
  * 
  * @param c The character to be checked.
- * @return int Returns non-zero if the character is a valid ASCII character, and zero otherwise.
+ * @return int Returns non-zero if the character is a valid ASCII character,
+ *  and zero otherwise.
  */
-int	ft_isascii(int c);
+int		ft_isascii(int c);
 
 /**
  * @brief Verifies if the given value is a printable character.
  * 
  * @param c The character to be checked.
- * @return int Returns non-zero if the character is a printable character, and zero otherwise.
+ * @return int Returns non-zero if the character is a printable character,
+ *  and zero otherwise.
  */
-int	ft_isprint(int c);
+int		ft_isprint(int c);
 
 /**
  * @brief Returns the length of the string.
@@ -68,8 +72,8 @@ int	ft_isprint(int c);
 size_t	ft_strlen(const char *s);
 
 /**
- * @brief Fills the first 'n' bytes of the memory area pointed to by 'ptr' with the constant byte 'value'.
- * 
+ * @brief Fills the first 'n' bytes of the memory area pointed to by
+ *  'ptr' with the constant byte 'value'.
  * @param ptr A pointer to the memory area to be filled.
  * @param value The constant byte to fill the memory area.
  * @param n The number of bytes to be filled.
@@ -78,8 +82,8 @@ size_t	ft_strlen(const char *s);
 void	*ft_memset(void *ptr, int value, size_t n);
 
 /**
- * @brief Fills the first 'n' bytes of the memory area pointed to by 'ptr' with zeros.
- * 
+ * @brief Fills the first 'n' bytes of the memory area pointed
+ *  to by 'ptr' with zeros.
  * @param ptr A pointer to the memory area to be filled.
  * @param n The number of bytes to be filled.
  */
@@ -96,8 +100,8 @@ void	ft_bzero(void *ptr, size_t n);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
 
 /**
- * @brief Copies 'n' bytes from memory area 'src' to memory area 'dst', even if the memory areas overlap.
- * 
+ * @brief Copies 'n' bytes from memory area 'src' to memory area 'dst', 
+ * even if the memory areas overlap.
  * @param dst The destination where the content is to be copied.
  * @param src The source from where the content is to be copied.
  * @param n The number of bytes to be copied.
@@ -116,11 +120,13 @@ void	*ft_memmove(void *dst, const void *src, size_t n);
 size_t	ft_strlcpy(char *dst, const char *src, size_t n);
 
 /**
- * @brief Appends the string 'src' to the end of 'dst', but not more than 'n' characters in total are written to 'dst', including the NULL terminator.
- * 
+ * @brief Appends the string 'src' to the end of 'dst', 
+ * but not more than 'n' characters in total are written to 'dst',
+ *  including the NULL terminator.
  * @param dst The destination string.
  * @param src The source string.
- * @param n The total number of characters to be written to 'dst', including the NULL terminator.
+ * @param n The total number of characters to be written to 'dst', 
+ * including the NULL terminator.
  * @return size_t Returns the total length of 'dst' after the concatenation.
  */
 size_t	ft_strlcat(char *dst, const char *src, size_t n);
@@ -129,32 +135,37 @@ size_t	ft_strlcat(char *dst, const char *src, size_t n);
  * @brief Converts a given letter to uppercase.
  * 
  * @param c The character to be converted.
- * @return int Returns the converted character, or the original character if it was not a lowercase letter.
+ * @return int Returns the converted character, or the original 
+ * character if it was not a lowercase letter.
  */
-int	ft_toupper(int c);
+int		ft_toupper(int c);
 
 /**
  * @brief Converts a given letter to lowercase.
  * 
  * @param c The character to be converted.
- * @return int Returns the converted character, or the original character if it was not an uppercase letter.
+ * @return int Returns the converted character,
+ * or the original character if it was not an uppercase letter.
  */
-int	ft_tolower(int c);
+int		ft_tolower(int c);
 
 /**
- * @brief Locates the first occurrence of 'chr' in the string pointed to by 'str'.
- * 
+ * @brief Locates the first occurrence of 'chr' in the string
+ *  pointed to by 'str'.
  * @param str The string to be scanned.
  * @param chr The character to be located.
- * @return char* Returns a pointer to the located character, or NULL if the character does not appear in the string.
+ * @return char* Returns a pointer to the located character, or NULL
+ *  if the character does not appear in the string.
  */
 char	*ft_strchr(const char *str, int chr);
 /**
  * @brief Locates the last occurrence of `chr` in the string pointed to by `str`.
  * 
  * @param str The string to be scanned.
- * @param chr The character to be located. It is passed as its int promotion, but it is internally converted back to char.
- * @return char* Returns a pointer to the located character, or NULL if the character does not appear in the string.
+ * @param chr The character to be located. It is passed as its int promotion,
+ *  but it is internally converted back to char.
+ * @return char* Returns a pointer to the located character,
+ *  or NULL if the character does not appear in the string.
  */
 char	*ft_strrchr(const char *str, int chr);
 
@@ -164,17 +175,21 @@ char	*ft_strrchr(const char *str, int chr);
  * @param s1 The first string to be compared.
  * @param s2 The second string to be compared.
  * @param n The maximum number of characters to be compared.
- * @return int Returns an integer less than, equal to, or greater than zero if `s1` is found, respectively, to be less than, to match, or be greater than `s2`.
+ * @return int Returns an integer less than, equal to, or greater than
+ *  zero if `s1` is found, respectively, to be less than, to match,
+ *  or be greater than `s2`.
  */
-int	ft_strncmp(const char *s1, const char *s2, size_t n);
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
 
 /**
- * @brief Scans the initial `n` bytes of the memory area pointed to by `str` for the first occurrence of `c`.
- * 
+ * @brief Scans the initial `n` bytes of the memory area pointed to by 
+ * `str` for the first occurrence of `c`.
  * @param str The memory area to be scanned.
- * @param c The value to be searched. It is passed as its int promotion, but it is internally converted back to unsigned char.
+ * @param c The value to be searched. It is passed as its int promotion, 
+ * but it is internally converted back to unsigned char.
  * @param n The number of bytes to be scanned.
- * @return void* Returns a pointer to the matching byte, or NULL if the character does not occur in the given memory area.
+ * @return void* Returns a pointer to the matching byte, 
+ * or NULL if the character does not occur in the given memory area.
  */
 void	*ft_memchr(const void *str, int c, size_t n);
 
@@ -184,52 +199,59 @@ void	*ft_memchr(const void *str, int c, size_t n);
  * @param s1 The first memory area.
  * @param s2 The second memory area.
  * @param n The number of bytes to be compared.
- * @return int Returns an integer less than, equal to, or greater than zero if `s1` is found, respectively, to be less than, to match, or be greater than `s2`.
+ * @return int Returns an integer less than, equal to, or greater than zero if
+ * `s1`
+ * is found, respectively, to be less than, to match, or be greater than `s2`.
  */
-int	ft_memcmp(const void *s1, const void *s2, size_t n);
+int		ft_memcmp(const void *s1, const void *s2, size_t n);
 
 /**
- * @brief Locates the first occurrence of the null-terminated string `needle` in the string `haystack`,
- *  where not more than `n` characters are searched.
+ * @brief Locates the first occurrence of the null-terminated string `needle`
+ *   in the string `haystack`, where not more than `n` characters are searched.
  * @param haystack The string to be scanned.
  * @param needle The string to be searched within `haystack`.
  * @param n The maximum number of characters to be searched.
- * @return char* Returns a pointer to the first character of the first occurrence of `needle`, or NULL if `needle` is not found.
+ * @return char* Returns a pointer to the first character of 
+ * the first occurrence of `needle`, or NULL if `needle` is not found.
  */
 char	*ft_strnstr(const char *haystack, const char *needle, size_t n);
 
 /**
- * @brief Converts the initial portion of the string pointed to by `str` to int representation.
- * 
+ * @brief Converts the initial portion of the string
+ * pointed to by `str` to int representation.
  * @param str The string to be converted.
- * @return int Returns the converted integral number as an int value. If no valid conversion could be performed, it returns zero.
+ * @return int Returns the converted integral number as an int value.
+ * If no valid conversion could be performed, it returns zero.
  */
-int	ft_atoi(const char *str);
+int		ft_atoi(const char *str);
 
 /**
- * @brief Allocates memory for an array of `n` elements, each of them `size` bytes long,
- * and initializes all its bits to zero.
+ * @brief Allocates memory for an array of `n` elements,
+ *  each of them `size` bytes long, and initializes all its bits to zero.
  * @param n The number of elements to be allocated.
  * @param size The size of elements.
- * @return void* Returns a pointer to the allocated memory, or NULL if the allocation fails.
+ * @return void* Returns a pointer to the allocated memory,
+ *  or NULL if the allocation fails.
  */
 void	*calloc(size_t n, size_t size);
 /**
- * @brief Allocates memory and copies the string 's' into that memory, returning a pointer to it.
- * 
+ * @brief Allocates memory and copies the string 's' into that memory, 
+ * returning a pointer to it.
  * @param s The string to be duplicated.
- * @return char* Returns a pointer to the newly allocated string, or NULL if the allocation failed.
+ * @return char* Returns a pointer to the newly allocated string,
+ *  or NULL if the allocation failed.
  */
 char	*ft_strdup(const char *s);
 
 /**
- * @brief Allocates memory and copies a substring from the string 's' into that memory, starting at 'start' and of maximum size 'len'.
+ * @brief Allocates memory and copies a substring from the string 's'
+ *  into that memory, starting at 'start' and of maximum size 'len'.
  * The substring is also NULL-terminated.
- * 
  * @param s The string from which to create the substring.
  * @param start The index in 's' where the substring starts.
  * @param len The maximum length of the substring.
- * @return char* Returns a pointer to the newly allocated substring, or NULL if the allocation failed.
+ * @return char* Returns a pointer to the newly allocated substring,
+ * or NULL if the allocation failed.
  */
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 /**
@@ -237,13 +259,14 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
  * 
  * @param s1 The prefix string.
  * @param s2 The suffix string.
- * @return char* Returns a new string which is the result of the concatenation, or NULL if the allocation fails.
+ * @return char* Returns a new string which is the result of the concatenation,
+ *  or NULL if the allocation fails.
  */
 char	*ft_strjoin(char const *s1, char const *s2);
 
 /**
- * @brief Trims the beginning and end of 's1' with the characters contained in 'set'.
- * 
+ * @brief Trims the beginning and end of 's1'
+ * with the characters contained in 'set'.
  * @param s1 The string to be trimmed.
  * @param set The reference set of characters to trim.
  * @return char* Returns the trimmed string, or NULL if the allocation fails.
@@ -255,25 +278,28 @@ char	*ft_strtrim(char const *s1, char const *set);
  * 
  * @param s The string to be split.
  * @param c The delimiter character.
- * @return char** Returns an array of the substrings, or NULL if the allocation fails.
- */
+ * @return char** Returns an array of the substrings,
+ * or NULL if the allocation fails.
+ * */
 char	**ft_split(char const *s, char c);
 
 /**
  * @brief Converts an integer 'n' to a string.
  * 
  * @param n The integer to be converted.
- * @return char* Returns the string representing the integer, or NULL if the allocation fails.
- */
+ * @return char* Returns the string representing the integer,
+ * or NULL if the allocation fails.
+ * */
 char	*ft_itoa(int n);
 
 /**
- * @brief Applies the function 'f' to each character of the string 's' to create a new string resulting from successive applications of 'f'.
- * 
+ * @brief Applies the function 'f' to each character of the string 's'
+ * to create a new string resulting from successive applications of 'f'.
  * @param s The string on which to iterate.
  * @param f The function to apply to each character of 's'.
- * @return char* Returns the string created from the successive applications of 'f', or NULL if the allocation fails.
- */
+ * @return char* Returns the string created from the successive applications
+ *  of 'f', or NULL if the allocation fails.
+ **/
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 /**
@@ -301,8 +327,8 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 
 /**
- * @brief Outputs the string 's' to the given file descriptor, followed by a newline.
- * 
+ * @brief Outputs the string 's' to the given file descriptor,
+ * followed by a newline.
  * @param s The string to output.
  * @param fd The file descriptor on which to write.
  */
@@ -318,8 +344,8 @@ void	ft_putnbr_fd(int n, int fd);
 
 typedef struct s_list
 {
-void *content;
-struct s_list *next;
-} t_list;
+	void			*content;
+	struct s_list	*next;
+}	t_list;
 
 #endif
