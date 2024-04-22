@@ -6,7 +6,7 @@
 /*   By: antonimo <antonimo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 10:37:41 by antonimo          #+#    #+#             */
-/*   Updated: 2024/04/10 10:37:42 by antonimo         ###   ########.fr       */
+/*   Updated: 2024/04/22 12:38:52 by antonimo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,16 +17,13 @@ char	*ft_strchr(const char *str, int chr)
 	int	i;
 
 	i = 0;
+	if ((char)chr == '\0')
+		return ((char *)(str + ft_strlen(str)));
 	while (str[i] != '\0')
 	{
-		if (str[i] == chr)
+		if (str[i] == (char)chr)
 			return ((char *)(str + i));
 		i++;
 	}
 	return (NULL);
 }
-
-/* 
-- We've casted the returned pointer because function
-request a pointer with char type.
-*/

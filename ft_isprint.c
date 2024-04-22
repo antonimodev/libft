@@ -6,7 +6,7 @@
 /*   By: antonimo <antonimo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 11:51:51 by antonimo          #+#    #+#             */
-/*   Updated: 2024/04/09 12:06:34 by antonimo         ###   ########.fr       */
+/*   Updated: 2024/04/22 12:12:51 by antonimo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@ int	ft_isprint(int c)
 	if (c >= 32 && c <= 126)
 		return (1);
 	else
-		return (c);
+		return (0);
 }

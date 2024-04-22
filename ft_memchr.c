@@ -6,7 +6,7 @@
 /*   By: antonimo <antonimo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 11:47:41 by antonimo          #+#    #+#             */
-/*   Updated: 2024/04/12 11:47:47 by antonimo         ###   ########.fr       */
+/*   Updated: 2024/04/22 12:46:35 by antonimo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memchr(const void *str, int c, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		if (ptr[i] == c)
+		if (ptr[i] == (unsigned char)c)
 			return ((unsigned char *)(str + i));
 		i++;
 	}
