@@ -6,7 +6,7 @@
 /*   By: antonimo <antonimo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 10:56:44 by antonimo          #+#    #+#             */
-/*   Updated: 2024/04/22 10:42:05 by antonimo         ###   ########.fr       */
+/*   Updated: 2024/04/23 16:24:25 by antonimo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,10 @@ static	char	*ft_memdigits(int n)
 {
 	char	*str;
 
-	str = malloc ((ft_countdigits(n) + 1) * sizeof(char));
+	if (n < 0)
+		str = malloc ((ft_countdigits(n) + 2) * sizeof(char));
+	else
+		str = malloc ((ft_countdigits(n) + 1) * sizeof(char));
 	if (str == NULL)
 		return (NULL);
 	return (str);
@@ -76,7 +79,6 @@ char	*ft_itoa(int n)
 	{
 		n = -n;
 		str[i] = '-';
-		i++;
 	}
 	while (i < digits)
 	{

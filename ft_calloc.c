@@ -6,13 +6,13 @@
 /*   By: antonimo <antonimo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 15:29:31 by antonimo          #+#    #+#             */
-/*   Updated: 2024/04/22 13:14:10 by antonimo         ###   ########.fr       */
+/*   Updated: 2024/04/23 12:29:58 by antonimo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*calloc(size_t n, size_t size)
+void	*ft_calloc(size_t n, size_t size)
 {
 	size_t			i;
 	size_t			bytvalue;
@@ -25,7 +25,7 @@ void	*calloc(size_t n, size_t size)
 		return (NULL);
 	while (i < bytvalue)
 	{
-		ptr[i] = '0';
+		ptr[i] = 0;
 		i++;
 	}
 	return (ptr);

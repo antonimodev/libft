@@ -6,7 +6,7 @@
 /*   By: antonimo <antonimo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 13:04:10 by antonimo          #+#    #+#             */
-/*   Updated: 2024/04/22 10:39:10 by antonimo         ###   ########.fr       */
+/*   Updated: 2024/04/23 10:12:59 by antonimo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@ char	*ft_strtrim(char const *s1, char const *set)
 	end = ft_strlen(s1);
 	if (s1 == NULL || set == NULL)
 		return (NULL);
-	while (ft_strchr(set, s1[start]) != NULL)
+	while (s1[start] != '\0' && ft_strchr(set, s1[start]) != NULL)
 	{
 		start++;
 	}
-	while (ft_strrchr(set, s1[end - 1]) != NULL)
+	while (end != start && (ft_strrchr(set, s1[end - 1])) != NULL)
 	{
 		end--;
 	}

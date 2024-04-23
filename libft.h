@@ -6,7 +6,7 @@
 /*   By: antonimo <antonimo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 15:22:19 by antonimo          #+#    #+#             */
-/*   Updated: 2024/04/22 11:47:07 by antonimo         ###   ########.fr       */
+/*   Updated: 2024/04/23 12:27:50 by antonimo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -233,7 +233,7 @@ int		ft_atoi(const char *str);
  * @return void* Returns a pointer to the allocated memory,
  *  or NULL if the allocation fails.
  */
-void	*calloc(size_t n, size_t size);
+void	*ft_calloc(size_t n, size_t size);
 /**
  * @brief Allocates memory and copies the string 's' into that memory, 
  * returning a pointer to it.
@@ -241,7 +241,7 @@ void	*calloc(size_t n, size_t size);
  * @return char* Returns a pointer to the newly allocated string,
  *  or NULL if the allocation failed.
  */
-char	*ft_strdup(const char *s);
+char	*ft_strdup(const char *s1);
 
 /**
  * @brief Allocates memory and copies a substring from the string 's'
