@@ -6,7 +6,7 @@
 /*   By: antonimo <antonimo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 10:56:44 by antonimo          #+#    #+#             */
-/*   Updated: 2024/04/23 16:24:25 by antonimo         ###   ########.fr       */
+/*   Updated: 2024/04/24 16:46:13 by antonimo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,9 @@ static	int	ft_countdigits(int n)
 	int	nlen;
 
 	nlen = 0;
-	if (n == 0)
-		return (1);
-	if (n < 0)
-		n = -n;
-	while (n > 0)
+	if (n <= 0)
+		nlen++;
+	while (n != 0)
 	{
 		n = n / 10;
 		nlen ++;
@@ -29,63 +27,28 @@ static	int	ft_countdigits(int n)
 	return (nlen);
 }
 
-static	char	*ft_memdigits(int n)
-{
-	char	*str;
-
-	if (n < 0)
-		str = malloc ((ft_countdigits(n) + 2) * sizeof(char));
-	else
-		str = malloc ((ft_countdigits(n) + 1) * sizeof(char));
-	if (str == NULL)
-		return (NULL);
-	return (str);
-}
-
-static	char	*ft_reversestring(char *str)
-{
-	char	*rstr;
-	size_t	i;
-	int		j;
-	int		strlen;
-
-	rstr = malloc ((ft_strlen(str) + 1) * sizeof(char));
-	if (rstr == NULL)
-		return (NULL);
-	i = 0;
-	j = 0;
-	strlen = ft_strlen(str);
-	while (i < ft_strlen(str))
-	{
-		rstr[j] = str[strlen - 1];
-		j++;
-		strlen--;
-		i++;
-	}
-	rstr[j] = '\0';
-	return (rstr);
-}
-
 char	*ft_itoa(int n)
 {
-	int		i;
-	int		digits;
+	int		count;
+	long	num;
 	char	*str;
 
-	i = 0;
-	digits = ft_countdigits(n);
-	str = ft_memdigits(n);
+	num = n;
+	count = ft_countdigits(n);
+	str = (char *) malloc((ft_countdigits(n) + 1) * sizeof(char));
+	if (str == NULL)
+		return (NULL);
 	if (n < 0)
+		num = -num;
+	str[count] = '\0';
+	count--;
+	while (count >= 0)
 	{
-		n = -n;
-		str[i] = '-';
+		str[count] = (num % 10) + '0';
+		count--;
+		num = num / 10;
 	}
-	while (i < digits)
-	{
-		str[i] = (n % 10) + '0';
-		n = n / 10;
-		i++;
-	}
-	str[i] = '\0';
-	return (ft_reversestring(str));
+	if (n < 0)
+		str[0] = '-';
+	return (str);
 }
