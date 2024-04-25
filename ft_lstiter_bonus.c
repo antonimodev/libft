@@ -1,24 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone_bonus.c                               :+:      :+:    :+:   */
+/*   ft_lstiter_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: antonimo <antonimo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/25 14:01:59 by antonimo          #+#    #+#             */
-/*   Updated: 2024/04/25 14:02:03 by antonimo         ###   ########.fr       */
+/*   Created: 2024/04/25 14:00:33 by antonimo          #+#    #+#             */
+/*   Updated: 2024/04/25 15:43:36 by antonimo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstdelone(t_list *lst, void (*del)(void *))
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	if (lst != NULL)
+	while (lst != NULL)
 	{
-		del(lst->content);
-		free(lst);
+		f(lst->content);
+		lst = lst->next;
 	}
 }
 
-// Revisar manejo de errores con listas enlazadas
+/* Aquí aplicamos f al contenido del nodo
+después, asignamos a lst el siguiente nodo
+para seguir iterando con la funcion hasta terminar
+en NULL.*/

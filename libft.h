@@ -6,7 +6,7 @@
 /*   By: antonimo <antonimo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 15:22:19 by antonimo          #+#    #+#             */
-/*   Updated: 2024/04/23 12:27:50 by antonimo         ###   ########.fr       */
+/*   Updated: 2024/04/25 19:39:37 by antonimo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <unistd.h>
 # include <ctype.h>
 # include <stdlib.h>
+# include <stddef.h>
 
 /**
  * @brief Verifies if the given value is an alphabetic character.
@@ -342,10 +343,74 @@ void	ft_putendl_fd(char *s, int fd);
  */
 void	ft_putnbr_fd(int n, int fd);
 
+/**
+ * @brief Creates a new list element with the provided content.
+ *
+ * This function allocates (with malloc(3)) and returns a new
+ * element. The variable 'content' is initialized with the value 
+ * of the parameter 'content'. The variable 'next' is initialized to NULL.
+ *
+ * @param content The content to be included in the new list element.
+ * @return The newly created list element.
+ */
 typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
 }	t_list;
+
+t_list	*ft_lstnew(void *content);
+/**
+ * @brief Adds the element 'new' at the beginning of the list.
+ * @param lst The address of a pointer to the first link of a list.
+ * @param new The address of a pointer to the element to be added to the list.
+ */
+void	ft_lstadd_front(t_list **lst, t_list *new);
+
+/**
+ * @brief Counts the number of elements in a list.
+ * @param lst The beginning of the list.
+ * @return Size of the list.
+ */
+int		ft_lstsize(t_list *lst);
+
+/**
+ * @brief Finds the last element of the list.
+ * @param lst The beginning of the list.
+ * @return Last element of the list.
+ */
+t_list	*ft_lstlast(t_list *lst);
+
+/**
+ * @brief Adds the element 'new' at the end of the list.
+ * @param lst The address of a pointer to the first link of a list.
+ * @param new The address of a pointer to the element to be added to the list.
+ */
+void	ft_lstadd_back(t_list **lst, t_list *new);
+
+/**
+ * @brief Takes as a parameter an element and frees the memory of
+ * the element’s content using
+ * the function 'del' given as a parameter and free the element.
+ * @param lst The element to free.
+ * @param del Address of the function used to delete the content.
+ */
+void	ft_lstdelone(t_list *lst, void (*del)(void *));
+
+/**
+ * @brief Deletes and frees the given element and every successor of that
+ *  element, using the function 'del' and free.
+ * @param lst The address of a pointer to an element.
+ * @param del Address of the function used to delete the content.
+ */
+void	ft_lstclear(t_list **lst, void (*del)(void *));
+
+/**
+ * @brief Iterates the list 'lst' and applies the function 
+ * 'f' to the content of each element.
+ * @param lst The address of a pointer to an element.
+ * @param f The address of the function used to iterate on the list.
+ */
+void	ft_lstiter(t_list *lst, void (*f)(void *));
 
 #endif
