@@ -1,75 +1,101 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_split.c                                         :+:      :+:    :+:   */
+/*   ft_split3.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: antonimo <antonimo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/25 10:38:06 by antonimo          #+#    #+#             */
-/*   Updated: 2024/04/25 19:35:32 by antonimo         ###   ########.fr       */
+/*   Created: 2024/04/16 16:09:34 by antonimo          #+#    #+#             */
+/*   Updated: 2024/04/25 11:04:57 by antonimo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_countwords(const char *s, char c)
+static int	ft_countwords(const char *s, int c)
 {
 	int	i;
 	int	words;
-
 	i = 0;
 	words = 0;
 	if (s == NULL)
 		return (0);
+	if (s[0] != c)
+		words++;
 	while (s[i] != '\0')
 	{
-		while (s[i] == c)
-			i++;
-		if (s[i] != c && (i == 0 || s[i - 1] == c))
+		if (s[i] == c && s[i + 1] != '\0' && s[i + 1] != c)
 			words++;
-		while (s[i] != c && s[i] != '\0')
-			i++;
+		i++;
 	}
 	return (words);
 }
 
-static char	*ft_strmatrix(const char *str, int start, int finish)
+static int	ft_wordlen(char const *s, char c)
 {
-	char	*word;
 	int		i;
+	int		len;
 
 	i = 0;
-	word = malloc((finish - start + 1) * sizeof(char));
-	while (start < finish)
-		word[i++] = str[start++];
-	word[i] = '\0';
-	return (word);
+	len = 0;
+	while (s[i] != c && s[i] != '\0')
+	{
+		i++;
+		len++;
+	}
+	return (len);
+}
+
+static char	**ft_fillmatrix(char const *s, int words, char c, char **matrix)
+{
+	int		i;
+	int		j;
+	int		len;
+
+	i = 0;
+	while (i < words)
+	{
+		while (*s == c)
+			s++;
+		len = ft_wordlen(s, c);
+		matrix[i] = (char *)malloc(sizeof(char) * (len + 1));
+		if (matrix[i] == NULL)
+			return (ft_freematrix(matrix, i));
+		j = 0;
+		while (j < len)
+			matrix[i][j++] = *s++;
+		matrix[i][j] = '\0';
+		i++;
+	}
+	matrix[i] = NULL;
+	return (matrix);
+}
+
+static void	*ft_freematrix(char **matrix, int words)
+{
+	int	i;
+
+	i = 0;
+	while (i < words)
+	{
+		free(matrix[i]);
+		i++;
+	}
+	free(matrix);
+	return (NULL);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	size_t		i;
-	size_t		j;
-	int			start;
-	char		**matrix;
+	char	**matrix;
+	int		words;
 
-	i = 0;
-	j = 0;
-	start = -1;
-	matrix = malloc((ft_countwords(s, c) + 1) * sizeof(char *));
-	if (matrix == NULL || s == NULL)
+	if (!s)
 		return (NULL);
-	while (i <= ft_strlen(s))
-	{
-		if (s[i] != c && start < 0)
-			start = i;
-		else if ((s[i] == c || i == ft_strlen(s)) && start >= 0)
-		{
-			matrix[j++] = ft_strmatrix(s, start, i);
-			start = -1;
-		}
-		i++;
-	}
-	matrix[j] = NULL;
+	words = ft_countwords(s, c);
+	matrix = (char **)malloc(sizeof(char *) * (words + 1));
+	if (matrix == NULL)
+		return (NULL);
+	matrix = ft_fillmatrix(s, words, c, matrix);
 	return (matrix);
 }
