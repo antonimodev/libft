@@ -20,5 +20,3 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *))
 		free(lst);
 	}
 }
-
-// Revisar manejo de errores con listas enlazadas
