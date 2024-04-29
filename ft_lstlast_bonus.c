@@ -6,7 +6,7 @@
 /*   By: antonimo <antonimo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 14:02:06 by antonimo          #+#    #+#             */
-/*   Updated: 2024/04/29 10:57:10 by antonimo         ###   ########.fr       */
+/*   Updated: 2024/04/29 15:09:45 by antonimo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,8 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	if (lst == NULL)
-		return (NULL);
-	while (lst->next != NULL)
-		lst = lst->next;
+	if (lst != NULL)
+		while (lst->next != NULL)
+			lst = lst->next;
 	return (lst);
 }
