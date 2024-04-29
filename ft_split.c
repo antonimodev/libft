@@ -1,24 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_split3.c                                        :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: antonimo <antonimo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 16:09:34 by antonimo          #+#    #+#             */
-/*   Updated: 2024/04/25 11:04:57 by antonimo         ###   ########.fr       */
+/*   Updated: 2024/04/29 11:20:19 by antonimo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static int	ft_countwords(const char *s, int c);
+static int	ft_wordlen(char const *s, char c);
+static void	*ft_freematrix(char **matrix, int words);
+static char	**ft_fillmatrix(char const *s, int words, char c, char **matrix);
+
 static int	ft_countwords(const char *s, int c)
 {
 	int	i;
 	int	words;
+
 	i = 0;
 	words = 0;
-	if (s == NULL)
+	if (s == NULL || s[0] == '\0')
 		return (0);
 	if (s[0] != c)
 		words++;
@@ -46,6 +52,20 @@ static int	ft_wordlen(char const *s, char c)
 	return (len);
 }
 
+static void	*ft_freematrix(char **matrix, int words)
+{
+	int	i;
+
+	i = 0;
+	while (i < words)
+	{
+		free(matrix[i]);
+		i++;
+	}
+	free(matrix);
+	return (NULL);
+}
+
 static char	**ft_fillmatrix(char const *s, int words, char c, char **matrix)
 {
 	int		i;
@@ -69,20 +89,6 @@ static char	**ft_fillmatrix(char const *s, int words, char c, char **matrix)
 	}
 	matrix[i] = NULL;
 	return (matrix);
-}
-
-static void	*ft_freematrix(char **matrix, int words)
-{
-	int	i;
-
-	i = 0;
-	while (i < words)
-	{
-		free(matrix[i]);
-		i++;
-	}
-	free(matrix);
-	return (NULL);
 }
 
 char	**ft_split(char const *s, char c)

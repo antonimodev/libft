@@ -6,7 +6,7 @@
 /*   By: antonimo <antonimo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 14:01:47 by antonimo          #+#    #+#             */
-/*   Updated: 2024/04/25 14:01:54 by antonimo         ###   ########.fr       */
+/*   Updated: 2024/04/29 13:21:00 by antonimo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,3 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	}
 	*lst = NULL;
 }
-
-/* Importante usar variable temporal para almacenar el enlace
-al siguiente nodo. Además hay que utilizar (*lst) para obtener
-lo que apunta, en caso contrario obtendríamos el siguiente nodo.
-
-REVISAR DE TODAS FORMAS*/

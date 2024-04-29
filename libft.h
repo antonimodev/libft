@@ -6,7 +6,7 @@
 /*   By: antonimo <antonimo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 15:22:19 by antonimo          #+#    #+#             */
-/*   Updated: 2024/04/25 19:39:37 by antonimo         ###   ########.fr       */
+/*   Updated: 2024/04/29 14:12:14 by antonimo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -412,5 +412,17 @@ void	ft_lstclear(t_list **lst, void (*del)(void *));
  * @param f The address of the function used to iterate on the list.
  */
 void	ft_lstiter(t_list *lst, void (*f)(void *));
+/**
+ * @brief Transforms a linked list by applying function 'f' to each element.
+ * 
+ * @param lst The original linked list.
+ * @param f The function to apply to each element of 'lst'. This function 
+ * should take a pointer to an element and return a pointer to a new element.
+ * @param del The function to delete an element if needed. This function 
+ * should take a pointer to an element.
+ * @return t_list* A new linked list with each element transformed by 'f'.
+ *  If an error occurs, NULL is returned.
+ */
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 #endif
