@@ -6,7 +6,7 @@
 /*   By: antonimo <antonimo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 13:23:24 by antonimo          #+#    #+#             */
-/*   Updated: 2024/04/15 12:05:50 by antonimo         ###   ########.fr       */
+/*   Updated: 2024/04/30 15:27:29 by antonimo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 
 	src2 = src;
 	i = 0;
+	if (src == NULL && dst == NULL)
+		return (0);
 	while (i < n)
 	{
 		((unsigned char *)dst)[i] = src2[i];
@@ -26,8 +28,3 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	}
 	return (dst);
 }
-
-/* - Void* has more size than char*.
-- We've changed type of variables to store different types and
-operate with those. This is because const cannot be modified.
-- size_t type is used to represent bytes, cannot be negative. */
