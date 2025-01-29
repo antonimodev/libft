@@ -1,9 +1,0 @@
-{
-	"files.associations": {
-		"libft.h": "c",
-		"string.h": "c",
-		"sstream": "c",
-		"stdlib.h": "c"
-	},
-	"editor.defaultFormatter": "keyhr.42-c-format"
-}
