@@ -6,7 +6,7 @@
 /*   By: antonimo <antonimo@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 15:22:19 by antonimo          #+#    #+#             */
-/*   Updated: 2024/11/28 11:15:02 by antonimo         ###   ########.fr       */
+/*   Updated: 2025/02/17 11:16:13 by antonimo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ int		ft_isdigit(int c);
 int		ft_isalnum(int c);
 int		ft_isascii(int c);
 int		ft_isprint(int c);
+int		ft_isspace(char chr);
 size_t	ft_strlen(const char *s);
 void	*ft_memset(void *ptr, int value, size_t n);
 void	ft_bzero(void *ptr, size_t n);
