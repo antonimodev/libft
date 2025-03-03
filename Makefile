@@ -10,7 +10,7 @@ SRC = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 	ft_strrchr.c ft_strncmp.c ft_memchr.c ft_memcmp.c ft_strnstr.c ft_atoi.c \
 	ft_calloc.c ft_strdup.c ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c \
 	ft_itoa.c ft_strmapi.c ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c \
-	ft_putendl_fd.c ft_putnbr_fd.c matrix_utils.c char_utils.c error_msg.c \
+	ft_putendl_fd.c ft_putnbr_fd.c char_utils.c error_msg.c \
 	ft_strcat.c ft_strcpy.c ft_strcmp.c \
 	get_next_line_utils.c \
 	get_next_line.c \
@@ -28,7 +28,6 @@ all: $(NAME)
 
 $(NAME): $(LIBFT_OBJ)
 	@ar rcs $(NAME) $(LIBFT_OBJ)
-	@echo "$(NAME) created!"
 
 bonus: $(NAME) $(LIBFT_OBJ_BONUS) $(LIBFT_OBJ)
 	@ar rcs $(NAME) $(LIBFT_OBJ_BONUS) $(LIBFT_OBJ)
