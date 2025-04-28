@@ -24,7 +24,7 @@ int	ft_strlen_gnl(const char *str)
 	return (i);
 }
 
-char	*ft_strjoin_gnl(char *s1, char *s2)
+char	*strjoin_and_free(char *s1, char *s2)
 {
 	int		len;
 	char	*str;

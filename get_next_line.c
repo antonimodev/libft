@@ -83,7 +83,7 @@ char	*ft_read_buffersize(int fd, char *stat_buff)
 			return (NULL);
 		}
 		buffer[read_result] = '\0';
-		stat_buff = ft_strjoin_gnl(stat_buff, buffer);
+		stat_buff = strjoin_and_free(stat_buff, buffer);
 		if (ft_strchr_gnl(buffer, '\n') == 1)
 			break ;
 	}

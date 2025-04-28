@@ -93,7 +93,7 @@ char	*ft_line_remaining(char *stat_buff);
 char	*ft_line(char *stat_buff);
 char	*ft_read_buffersize(int fd, char *stat_buff);
 int		ft_strlen_gnl(const char *str);
-char	*ft_strjoin_gnl(char *s1, char *s2);
+char	*strjoin_and_free(char *s1, char *s2);
 int		ft_strchr_gnl(char *str, char chr);
 void	*ft_calloc_gnl(size_t size, size_t type);
 
