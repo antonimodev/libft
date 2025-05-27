@@ -14,8 +14,8 @@
 
 int	ft_isspace(char chr)
 {
-	if (chr == '\t' || chr == '\n' || chr == '\r' || \
-		chr == '\v' || chr == ' ' || chr == '\f')
+	if (chr == '\t' || chr == '\n' || chr == '\r'
+		|| chr == '\v' || chr == ' ' || chr == '\f')
 		return (1);
 	return (0);
 }
