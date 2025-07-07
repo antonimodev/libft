@@ -17,5 +17,3 @@ int	ft_isdigit(int c)
 	else
 		return (0);
 }
-/*La funcion pide que le pases un valor ASCII
- del 48 al 57 que son los equivalentes al 0-9*/

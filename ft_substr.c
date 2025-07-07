@@ -36,9 +36,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	ptr[i] = '\0';
 	return (ptr);
 }
-
-/*Las dos excepciones tienen en cuenta que si la posicion
-se pasa de la longitud de strlen, devuelve un string
-vacío ya que sino cogeríamos memoria fuera de rango.
-En el caso de que la reserva de memoria en ptr fuese NULL
-devuelve NULL*/

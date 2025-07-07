@@ -35,13 +35,3 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t n)
 	}
 	return (NULL);
 }
-
-/* int	main(void)
-{
-	const char	str[20] = "hola que tal";
-	const char	str2[20] = "";
-
-	printf("resultado; %s\n", ft_strnstr(str, str2, 5));
-	printf("real; %s", strnstr(str, str2, 5));
-}
- */

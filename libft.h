@@ -6,7 +6,7 @@
 /*   By: antonimo <antonimo@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 15:22:19 by antonimo          #+#    #+#             */
-/*   Updated: 2025/03/03 12:16:45 by antonimo         ###   ########.fr       */
+/*   Updated: 2025/02/17 11:16:13 by antonimo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,9 +93,15 @@ char	*ft_line_remaining(char *stat_buff);
 char	*ft_line(char *stat_buff);
 char	*ft_read_buffersize(int fd, char *stat_buff);
 int		ft_strlen_gnl(const char *str);
-char	*strjoin_and_free(char *s1, char *s2);
+char	*ft_strjoin_gnl(char *s1, char *s2);
 int		ft_strchr_gnl(char *str, char chr);
 void	*ft_calloc_gnl(size_t size, size_t type);
+
+// MATRIX UTILITIES
+char	**create_matrix(int n);
+void	free_matrix(char **matrix);
+int		matrixlen(char **matrix);
+void	print_matrix(char **matrix);
 
 typedef struct s_pipe
 {

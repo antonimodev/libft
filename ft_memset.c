@@ -24,9 +24,3 @@ void	*ft_memset(void *ptr, int value, size_t n)
 	}
 	return (ptr);
 }
-
-/*
-- We've used size_t to compare "i" with "n".
-- Cast void pointer to unsigned char because unsigned char byte size
-is 1, and it goes from 0 to 255, including all ASCII characters.
-*/

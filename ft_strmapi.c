@@ -33,7 +33,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	str[i] = '\0';
 	return (str);
 }
-
-/*Tenemos que utilizar el puntero a la función
-"f" que recibe los parametros unsigned int y char
-para utilizarlos en cada caracter de s.*/

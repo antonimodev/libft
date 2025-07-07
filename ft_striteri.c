@@ -22,8 +22,3 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	}
 	s[i] = '\0';
 }
-
-/*No se permite igualar el caracter a una funcion
-que retorna VOID, pero podemos aplicar la funcion
-de igual manera refiriéndonos a su dirección de
-memoria.*/

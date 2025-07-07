@@ -31,8 +31,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	}
 	return (ft_substr(s1, start, end - start));
 }
-
-/*Con ft_substr me ahorro poner el malloc del string recortado
-Con strchr y rchr revisamos si los caracteres de set estan en s1
-En return ponemos end - start porque la string está recortada
-¿Hay que contemplar excepción de errores?*/

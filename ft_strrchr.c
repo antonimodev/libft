@@ -27,8 +27,3 @@ char	*ft_strrchr(const char *str, int chr)
 	}
 	return (NULL);
 }
-
-/* 
-- We've casted the returned pointer because function
-request a pointer with char type.
-*/
