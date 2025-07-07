@@ -6,7 +6,7 @@
 /*   By: antonimo <antonimo@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 15:22:19 by antonimo          #+#    #+#             */
-/*   Updated: 2025/02/17 11:16:13 by antonimo         ###   ########.fr       */
+/*   Updated: 2025/07/07 12:19:11 by antonimo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,7 +100,13 @@ void	*ft_calloc_gnl(size_t size, size_t type);
 // MATRIX UTILITIES
 char	**create_matrix(int n);
 void	free_matrix(char **matrix);
-int		matrixlen(char **matrix);
+void	free_matrix_error(char **matrix, int i);
+char	**matrix_append(char **matrix, char *new_str);
+char	**matrix_cpy(char **src, int extra_slots);
+char	**matrix_from_matrix(char **src_matrix, int start, int end);
+int		matrix_len(char **matrix);
+void	matrix_replace(char **matrix, int index, char *new_value);
+char	**matrix_substract(char **matrix, unsigned int index);
 void	print_matrix(char **matrix);
 
 typedef struct s_pipe
